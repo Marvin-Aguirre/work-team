@@ -4,3 +4,93 @@ body{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-size: cover;  
 }
+
+.form-box{
+    width: 280px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+}
+
+.form-box h1{
+    float: left;
+    font-size: 50px;
+    border-bottom: 5px solid #ffffff;
+    padding: 18px ;   
+}
+
+.form-text{
+    width: 100%;
+    overflow: hidden;
+    font-size: 25px;
+    padding: 10px 0;
+    margin: 8px 0;
+    border-bottom:  1px solid  #ffffff;
+}
+
+.form-box label-text{
+    float: left;
+    font-size: 20px;
+    border-bottom: 2px solid #ffffff;
+    padding: 13px 0;   
+}
+
+.form-text i{   
+    width: 26px;
+    float: left;
+    text-align: center;
+}
+
+.campo{
+    border: none;
+    outline: none;
+    background: none;
+    color: white;
+    font-size: 90 px;
+    width: 80%;
+    float: left;
+    margin: 0 10px;
+    
+}
+::placeholder{
+    color: white;
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+input{
+    font-size: 18px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;  
+}
+
+.button{
+    
+    width: 100%;
+    background-color: rgba(179, 22, 211, 0.589);
+    border: 2px solid rgb(241, 239, 241);
+    color: rgb(255, 255, 255);
+    padding: 6px;
+    font-size: 30px;
+    cursor: pointer;
+    margin: 14px 0;
+    border-radius: 12px;
+    font-family: fantasy;
+}
+
+p.small {
+    font-variant: small-caps;
+    color: white;
+    padding: 18px ;
+    font-size:40px ;
+    text-align: center;
+    font-weight: bold    
+}
+
+.form-box h4{
+    font-variant: small-caps;
+    color: white;
+    font-size:17px ;
+    text-align: left;
+    font-weight: bold
+}
