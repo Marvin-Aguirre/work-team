@@ -81,3 +81,66 @@ function movimiento(){
 	var ny = cabeza.y+ydir;
 	cabeza.setxy(nx,ny);
 }
+//Se agrego la funcion control
+function control(event){
+	var cod = event.keyCode;
+	if(ejex){
+		if(cod == 38){
+			ydir = -tamano;
+			xdir = 0;
+			ejex = false;
+			ejey = true;
+		}
+		if(cod == 40){
+			ydir = tamano;
+			xdir = 0;
+			ejex = false;
+			ejey = true;
+		}
+	}
+	if(ejey){
+		if(cod == 37){
+			ydir = 0;
+			xdir = -tamano;
+			ejey = false;
+			ejex = true;
+		}
+		if(cod == 39){
+			ydir = 0;
+			xdir = tamano;
+			ejey = false;
+			ejex = true;
+		}
+	}
+}//Se agrego la funcion control
+function control(event){
+	var cod = event.keyCode;
+	if(ejex){
+		if(cod == 38){
+			ydir = -tamano;
+			xdir = 0;
+			ejex = false;
+			ejey = true;
+		}
+		if(cod == 40){
+			ydir = tamano;
+			xdir = 0;
+			ejex = false;
+			ejey = true;
+		}
+	}
+	if(ejey){
+		if(cod == 37){
+			ydir = 0;
+			xdir = -tamano;
+			ejey = false;
+			ejex = true;
+		}
+		if(cod == 39){
+			ydir = 0;
+			xdir = tamano;
+			ejey = false;
+			ejex = true;
+		}
+	}
+}
