@@ -24,6 +24,27 @@
 		function defgrosor(g){
 			grosor=g;
 		}
+      //se agregaron eventos al canvas
+		canvas.addEventListener('mousedown',function(e){
+			x=e.clientX-rect.left;
+			y=e.clientY-rect.top;
+			dibujando=true;
+		});
+		canvas.addEventListener('mousemove',function(e){
+			if(dibujando==true){
+				dibujar(x ,y , e.clientX - rect.left,e.clientY-rect.top);
+				x= e.clientX-rect.left;
+				y= e.clientY-rect.top;
+			}
+		});
+        canvas.addEventListener('mouseup',function(e){
+			if(dibujando==true){
+				dibujar(x,y,e.clientX-rect.left,e.clientY-rect.top);
+				x=0;
+				y=0;
+				dibujando=false;
+			}
+		});  
 
 	</script >
 </body>
