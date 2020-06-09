@@ -69,3 +69,15 @@ class Comida extends objeto {
 		ctx.fillRect(this.x, this.y, this.tamano, this.tamano);
 	}
 }
+//Se crearon los Objetos del juego
+var cabeza = new Cola(20,20);
+var comida = new Comida();
+var ejex = true;
+var ejey = true;
+var xdir = 0;
+var ydir = 0;
+function movimiento(){
+	var nx = cabeza.x+xdir;
+	var ny = cabeza.y+ydir;
+	cabeza.setxy(nx,ny);
+}
