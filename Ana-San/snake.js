@@ -177,3 +177,23 @@ function choquecuerpo(){
 		}
 	}
 }
+//Se agrego la funcion dibujar dentrop del canvas
+function dibujar(){
+	var canvas = document.getElementById("canvas");
+	var ctx = canvas.getContext("2d");
+	ctx.clearRect(0,0, canvas.width, canvas.height);
+	//aquí abajo va todo el dibujo
+	cabeza.dibujar(ctx);
+	comida.dibujar(ctx);
+}
+function main(){
+	choquecuerpo();
+	choquepared();
+	dibujar();
+	movimiento();
+	if(cabeza.choque(comida)){
+		comida.colocar();
+		cabeza.meter();
+	}
+}
+setInterval("main()", velocidad);
