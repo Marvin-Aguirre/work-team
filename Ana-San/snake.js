@@ -69,3 +69,111 @@ class Comida extends objeto {
 		ctx.fillRect(this.x, this.y, this.tamano, this.tamano);
 	}
 }
+//Se crearon los Objetos del juego
+var cabeza = new Cola(20,20);
+var comida = new Comida();
+var ejex = true;
+var ejey = true;
+var xdir = 0;
+var ydir = 0;
+function movimiento(){
+	var nx = cabeza.x+xdir;
+	var ny = cabeza.y+ydir;
+	cabeza.setxy(nx,ny);
+}
+//Se agrego la funcion control
+function control(event){
+	var cod = event.keyCode;
+	if(ejex){
+		if(cod == 38){
+			ydir = -tamano;
+			xdir = 0;
+			ejex = false;
+			ejey = true;
+		}
+		if(cod == 40){
+			ydir = tamano;
+			xdir = 0;
+			ejex = false;
+			ejey = true;
+		}
+	}
+	if(ejey){
+		if(cod == 37){
+			ydir = 0;
+			xdir = -tamano;
+			ejey = false;
+			ejex = true;
+		}
+		if(cod == 39){
+			ydir = 0;
+			xdir = tamano;
+			ejey = false;
+			ejex = true;
+		}
+	}
+}//Se agrego la funcion control
+function control(event){
+	var cod = event.keyCode;
+	if(ejex){
+		if(cod == 38){
+			ydir = -tamano;
+			xdir = 0;
+			ejex = false;
+			ejey = true;
+		}
+		if(cod == 40){
+			ydir = tamano;
+			xdir = 0;
+			ejex = false;
+			ejey = true;
+		}
+	}
+	if(ejey){
+		if(cod == 37){
+			ydir = 0;
+			xdir = -tamano;
+			ejey = false;
+			ejex = true;
+		}
+		if(cod == 39){
+			ydir = 0;
+			xdir = tamano;
+			ejey = false;
+			ejex = true;
+		}
+	}
+}
+//Se agrego la funcion fin del juego
+function findeJuego(){
+	xdir = 0;
+	ydir = 0;
+	ejex = true;
+	ejey = true;
+	cabeza = new Cola(20,20);
+	comida = new Comida();
+	alert("Perdiste");
+}
+//se agrego la funcion choque en pared
+function choquepared(){
+	if(cabeza.x < 0 || cabeza.x > 590 || cabeza.y < 0 || cabeza.y > 590){
+		findeJuego();
+	}
+}
+//se agrego la funcion choque en cuerpo
+function choquecuerpo(){
+	var temp = null;
+	try{
+		temp = cabeza.verSiguiente().verSiguiente();
+	}catch(err){
+		temp = null;
+	}
+	while(temp != null){
+		if(cabeza.choque(temp)){
+			//fin de juego
+			findeJuego();
+		} else {
+			temp = temp.verSiguiente();
+		}
+	}
+}
