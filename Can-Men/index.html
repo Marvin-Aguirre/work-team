@@ -16,9 +16,29 @@
 
     		var nombre =prompt("BIENVENIDO AL JUEGO ADIVINA EL NÚMERO, INGRESA TU NOMBRE:")
 			for(intentos;intentos<5;intentos++){
+				numero = parseInt(prompt(nombre+", INGRESAR UN NUMERO ENTRE 1 Y 10"));
+			if(numero>=min&&numero<=max){
 
+				if(numero<aleatorio){
+					alert("EL NUMERO QUE INGRESO ES MAS BAJO, QUE EL NUMERO A ADIVINAR. INGRESE UN NUMERO MAS ALTO");
+				}else if(numero>aleatorio){
+					alert("EL NUMERO QUE INGRESO ES MAS ALTO, QUE EL NUMERO A ADIVINAR. INGRESE UN NUMERO MAS BAJO");
+				}else if(numero==aleatorio){
+					break;
+				}
+ 
+			}else{
+				alert("DEBE INGRESAR UN NUMERO ENTRE 1 Y 10")
+			}
 
-}
-</script>
+		}
+
+		if(numero==aleatorio){
+			alert("FELICIDADES ADIVINASTE EL NUMERO EN "+ (intentos+1)+" INTENTOS")
+		}else{
+			alert("SE ACABÓ EL NUMERO DE INTENTOS, SUERTE PARA LA PROXIMA!!")
+
+         }
+  </script>
 </body>
 </html>
