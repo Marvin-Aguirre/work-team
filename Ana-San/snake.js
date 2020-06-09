@@ -49,3 +49,23 @@ class Cola extends objeto {
 		return this.siguiente;
 	}
 }
+//SE CREO LA CLASE COMIDA
+class Comida extends objeto {
+	constructor(){
+		super();
+		this.x = this.generar();
+		this.y = this.generar();
+	}
+	generar(){
+		var num = (Math.floor(Math.random() * 59))*10;
+		return num;
+	}
+	colocar(){
+		this.x = this.generar();
+		this.y = this.generar();
+	}
+	dibujar(ctx){
+		ctx.fillStyle = "#FF0000";
+		ctx.fillRect(this.x, this.y, this.tamano, this.tamano);
+	}
+}
