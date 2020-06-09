@@ -6,7 +6,57 @@
     <title>Documento para trabajar el proyecto</title>
 </head>
 <body>
-    Jessica Osorio
-    
+    <!--DECLARACION DE LOS INPUT Y CANVAS A UTILIZAR -->
+	<canvas id="canvas" width="500" height="500" border="1"></canvas><br>
+	<input type="color"  id="color" oninput="defcolor(this.value);">
+    <input type="range"  id="grosor" oninput="defgrosor(this.value);"min="1" max="5" value="1">
+    <!--Creacion de un script y variables -->
+<script >
+		var canvas=document.getElementById('canvas');
+		var dibujo=canvas.getContext('2d');
+		var rect=canvas.getBoundingClientRect();
+		var x=0,y=0, dibujando=false,color='black',grosor=1;
+        //Creacion de la funcion defcolor y def grosor
+		function defcolor(c){
+			color=c;
+		}
+	
+		function defgrosor(g){
+			grosor=g;
+		}
+      //se agregaron eventos al canvas
+		canvas.addEventListener('mousedown',function(e){
+			x=e.clientX-rect.left;
+			y=e.clientY-rect.top;
+			dibujando=true;
+		});
+		canvas.addEventListener('mousemove',function(e){
+			if(dibujando==true){
+				dibujar(x ,y , e.clientX - rect.left,e.clientY-rect.top);
+				x= e.clientX-rect.left;
+				y= e.clientY-rect.top;
+			}
+		});
+        canvas.addEventListener('mouseup',function(e){
+			if(dibujando==true){
+				dibujar(x,y,e.clientX-rect.left,e.clientY-rect.top);
+				x=0;
+				y=0;
+				dibujando=false;
+			}
+		});  
+        //Se creo y agregaron parametros a la funcion dibujar
+		function dibujar(x1,y1,x2,y2){
+			dibujo.beginPath();
+			dibujo.strokeStyle=color;
+			dibujo.lineWidth=grosor;
+			dibujo.moveTo(x1,y1);
+			dibujo.lineTo(x2,y2);
+			dibujo.stroke();
+			dibujo.closePath(); 
+		}
+
+	</script >
 </body>
+
 </html>
