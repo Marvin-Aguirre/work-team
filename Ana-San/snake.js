@@ -144,3 +144,13 @@ function control(event){
 		}
 	}
 }
+//Se agrego la funcion fin del juego
+function findeJuego(){
+	xdir = 0;
+	ydir = 0;
+	ejex = true;
+	ejey = true;
+	cabeza = new Cola(20,20);
+	comida = new Comida();
+	alert("Perdiste");
+}
