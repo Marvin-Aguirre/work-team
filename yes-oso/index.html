@@ -45,6 +45,16 @@
 				dibujando=false;
 			}
 		});  
+        //Se creo y agregaron parametros a la funcion dibujar
+		function dibujar(x1,y1,x2,y2){
+			dibujo.beginPath();
+			dibujo.strokeStyle=color;
+			dibujo.lineWidth=grosor;
+			dibujo.moveTo(x1,y1);
+			dibujo.lineTo(x2,y2);
+			dibujo.stroke();
+			dibujo.closePath(); 
+		}
 
 	</script >
 </body>
