@@ -154,3 +154,9 @@ function findeJuego(){
 	comida = new Comida();
 	alert("Perdiste");
 }
+//se agrego la funcion choque en pared
+function choquepared(){
+	if(cabeza.x < 0 || cabeza.x > 590 || cabeza.y < 0 || cabeza.y > 590){
+		findeJuego();
+	}
+}
