@@ -160,3 +160,20 @@ function choquepared(){
 		findeJuego();
 	}
 }
+//se agrego la funcion choque en cuerpo
+function choquecuerpo(){
+	var temp = null;
+	try{
+		temp = cabeza.verSiguiente().verSiguiente();
+	}catch(err){
+		temp = null;
+	}
+	while(temp != null){
+		if(cabeza.choque(temp)){
+			//fin de juego
+			findeJuego();
+		} else {
+			temp = temp.verSiguiente();
+		}
+	}
+}
