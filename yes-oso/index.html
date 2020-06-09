@@ -11,13 +11,21 @@
 	<input type="color"  id="color" oninput="defcolor(this.value);">
     <input type="range"  id="grosor" oninput="defgrosor(this.value);"min="1" max="5" value="1">
     <!--Creacion de un script y variables -->
-	<script >
+<script >
 		var canvas=document.getElementById('canvas');
 		var dibujo=canvas.getContext('2d');
 		var rect=canvas.getBoundingClientRect();
 		var x=0,y=0, dibujando=false,color='black',grosor=1;
+        //Creacion de la funcion defcolor y def grosor
+		function defcolor(c){
+			color=c;
+		}
+	
+		function defgrosor(g){
+			grosor=g;
+		}
 
-	</script>
+	</script >
 </body>
 
 </html>
