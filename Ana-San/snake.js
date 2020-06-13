@@ -1,6 +1,6 @@
 //Variables globales
 var velocidad = 80;
-var tamano = 10;
+var tamano = 20;
 //SECREO LA CLASE OBJETO
 class objeto {
 	constructor(){
@@ -28,7 +28,7 @@ class Cola extends objeto {
 		if(this.siguiente != null){
 			this.siguiente.dibujar(ctx);
 		}
-		ctx.fillStyle = "#0000FF";
+		ctx.fillStyle = "salmon";
 		ctx.fillRect(this.x, this.y, this.tamano, this.tamano);
 	}
 	setxy(x,y){
@@ -65,7 +65,7 @@ class Comida extends objeto {
 		this.y = this.generar();
 	}
 	dibujar(ctx){
-		ctx.fillStyle = "#FF0000";
+		ctx.fillStyle = "cyan";
 		ctx.fillRect(this.x, this.y, this.tamano, this.tamano);
 	}
 }

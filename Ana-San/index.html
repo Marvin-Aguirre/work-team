@@ -7,11 +7,40 @@
 		<meta name="viewport" content="width=device-width; initial-scale=1.0">
 		<link rel="shortcut icon" href="/favicon.ico">
 		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+		  <table border="2px">
+			<tr>
+			   <td><center>Instrucciones:</center></td>
+		   </tr>
+		   <tr>
+			   <td>Con las flechas de tu teclado mueve el gusanito y haz que se coma el otro cuadrito para que crezca.</td>
+		   </tr>
+		 </table>
 	</head>
 	<style>
-		canvas {
-			border: 1px solid black;
+		td{
+			font-size: 20px;
+			font-family:fantasy;
 		}
+		 table {
+	    width: 20%;
+	    height: 100px;
+		border: 3px solid black;
+		background-color:salmon;
+        }
+		canvas {
+            border: 1px solid black;
+            background-color:mistyrose;
+            padding: 0; margin: auto; display: block; 
+             position: absolute; 
+             top: 0; bottom: 0; left: 0; right: 0;
+        }
+        html { 
+          background: url(fondo.jpg) no-repeat center center fixed; 
+          -webkit-background-size: cover;
+          -moz-background-size: cover;
+          -o-background-size: cover;
+          background-size: cover;
+        }
 	</style>
 	<body onkeydown="control(event);">
 		<script src="snake.js"></script>
