@@ -1,11 +1,41 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyecto</title>
+<meta charset="utf-8">
+<title>Cambia el color</title>
+
+<script>
+    // funcion para cambiar el color del background
+    function changeBodyBg(color){
+        document.body.style.background = color;
+    }
+    
+    // funcion para cambiar el color de fondo del encabezado
+    function changeHeadingBg(color){
+        document.getElementById("heading").style.background = color;
+    }
+
+
+</script>
 </head>
 <body>
-    Priscila Ortiz
-</body>
-</html>
+   <center>
+    <h1 id="heading">Colorea la página principal</h1>
+    <p>Introduccion a los istemas de computo..</p> </center>
+    <hr>
+    <div>
+        <!--Se agregaron los botones para cambiar el background de la pagina-->
+        <label>Cambiar el color de la pagina web:</label>
+        <button type="button" onclick="changeBodyBg('cyan');">cyan</button>
+        <button type="button" onclick="changeBodyBg('Plum');">Plum</button>
+        <button type="button" onclick="changeBodyBg('MediumVioletRed');">MediumVioletRed</button>
+        <button type="button" onclick="changeBodyBg('GreenYellow');">GreenYellow</button>
+    </div>
+    <br>
+    <div>
+         <!--Se agregaron los botones para cambiar el background del encabezado-->
+        <label>Cambiar el color del encabezado:</label>
+        <button type="button" onclick="changeHeadingBg('yellow');">yellow</button>
+        <button type="button" onclick="changeHeadingBg('pink');">pink</button>
+        <button type="button" onclick="changeHeadingBg('Tan');">Tan</button>
+    </div>
