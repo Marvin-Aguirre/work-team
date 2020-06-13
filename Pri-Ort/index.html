@@ -2,28 +2,40 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>CAMBIAR BACKGROUND</title>
+<title>Cambia el color</title>
+
+<script>
+    // funcion para cambiar el color del background
+    function changeBodyBg(color){
+        document.body.style.background = color;
+    }
+    
+    // funcion para cambiar el color de fondo del encabezado
+    function changeHeadingBg(color){
+        document.getElementById("heading").style.background = color;
+    }
+
 
 </script>
 </head>
 <body>
-    <h1 id="heading">Este es el encabezado</h1>
-    <p>Introduccion a los istemas de computo..</p>
+   <center>
+    <h1 id="heading">Colorea la página principal</h1>
+    <p>Introduccion a los istemas de computo..</p> </center>
     <hr>
     <div>
         <!--Se agregaron los botones para cambiar el background de la pagina-->
-        <label>Cambiar el background de la paginaweb:</label>
-        <button type="button" onclick="changeBodyBg('yellow');">Yellow</button>
-        <button type="button" onclick="changeBodyBg('lime');">Lime</button>
-        <button type="button" onclick="changeBodyBg('orange');">Orange</button>
+        <label>Cambiar el color de la pagina web:</label>
+        <button type="button" onclick="changeBodyBg('cyan');">cyan</button>
+        <button type="button" onclick="changeBodyBg('Plum');">Plum</button>
+        <button type="button" onclick="changeBodyBg('MediumVioletRed');">MediumVioletRed</button>
+        <button type="button" onclick="changeBodyBg('GreenYellow');">GreenYellow</button>
     </div>
+    <br>
     <div>
-        <!--Se agregaron los botones para cambiar el background del encabezado-->
-       <label>Cambiar el background del encabezado:</label>
-       <button type="button" onclick="changeHeadingBg('red');">Red</button>
-       <button type="button" onclick="changeHeadingBg('green');">Green</button>
-       <button type="button" onclick="changeHeadingBg('blue');">Blue</button>
-   </div>
-</body>
-</html>
-</html>
+         <!--Se agregaron los botones para cambiar el background del encabezado-->
+        <label>Cambiar el color del encabezado:</label>
+        <button type="button" onclick="changeHeadingBg('yellow');">yellow</button>
+        <button type="button" onclick="changeHeadingBg('pink');">pink</button>
+        <button type="button" onclick="changeHeadingBg('Tan');">Tan</button>
+    </div>
